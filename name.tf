@@ -1,4 +1,4 @@
-resource "aws_ec2_tag" "ec2-name-tag" {
+resource "aws_ec2_tag" "tag" {
   count       = length(var.RESOURCE_ID)
   resource_id = element(var.RESOURCE_ID, count.index)
   key         = var.TAG_NAME
